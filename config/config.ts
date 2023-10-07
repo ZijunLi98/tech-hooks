@@ -21,7 +21,7 @@ export default {
     ],
   ],
   mode: 'site',
-  title: 'encode react hooks',
+  title: 'techscrum react hooks',
   favicon: '/avatar.png',
   logo: '/logo.png',
   // alias: {

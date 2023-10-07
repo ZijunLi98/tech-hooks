@@ -3,16 +3,16 @@
   "version": "0.0.1",
   "description": "TechScrum Hooks Repo",
   "keywords": [
-    "encode",
+    "TechScrum",
     "react",
     "hooks"
   ],
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "types": "./lib/index.d.ts",
-  "unpkg": "./dist/encodeHooks.js",
+  "unpkg": "./dist/techHooks.js",
   "sideEffects": false,
-  "authors": "chenghuai",
+  "authors": "John",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

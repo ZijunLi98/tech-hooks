@@ -1,11 +1,9 @@
 const gulp = require('gulp');
 const fs = require('fs');
-// 提供 writeJson 函数
 const fse = require('fs-extra');
-// 类似于 fs 的升级版，快速获取文件
 const fg = require('fast-glob');
-// 获取文件中的信息格式
 const gm = require('gray-matter');
+
 async function genDesc(mdPath) {
   if (!fs.existsSync(mdPath)) {
     return;

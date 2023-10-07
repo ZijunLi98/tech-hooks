@@ -8,7 +8,7 @@ hero:
       link: /guide
     - text: Hooks 列表
       link: /hooks
-footer: Copyright (c) © 2023 by encode studio, All Rights Reserved
+footer: Copyright (c) © 2023 by techscrum, All Rights Reserved
 ---
 
 ## ✨ 特性
@@ -20,13 +20,13 @@ footer: Copyright (c) © 2023 by encode studio, All Rights Reserved
 ## 📦 安装
 
 ```bash
-$ pnpm install --save encode-hooks
+$ pnpm install --save tech-hooks
 # or
-$ yarn add encode-hooks
+$ yarn add tech-hooks
 ```
 
 ## 🔨 使用
 
 ```ts
-import { useToggle } from 'encode-hooks';
+import { useToggle } from 'tech-hooks';
 ```
