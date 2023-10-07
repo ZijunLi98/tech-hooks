@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useToggle } from 'tech-hooks';
+import { useToggle } from 'techHooks';
 
 export default () => {
   const [state, { toggle, set, setLeft, setRight }] = useToggle('Hello', 'World');

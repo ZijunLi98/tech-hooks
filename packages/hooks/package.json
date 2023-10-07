@@ -12,12 +12,10 @@
   "types": "./lib/index.d.ts",
   "unpkg": "./dist/techHooks.js",
   "sideEffects": false,
-  "authors": "John",
+  "author": "John",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "repository": "https://github.com/encode-studio-fe/encode-hooks",
-  "homepage": "https://github.com/encode-studio-fe/encode-hooks",
   "scripts": {
     "build": "gulp && webpack-cli"
   },

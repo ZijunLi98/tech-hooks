@@ -1,3 +1,4 @@
+const commonConfig = require('../../gulpfile');
 const gulp = require('gulp');
 const fs = require('fs');
 const fse = require('fs-extra');
@@ -59,3 +60,5 @@ gulp.task('metadata', async function () {
   // 将对象转换为 json 格式写入 metadata.json 中
   await fse.writeJson('metadata.json', metadata, { spaces: 2 });
 });
+
+exports.default = gulp.series(commonConfig.default, 'metadata');

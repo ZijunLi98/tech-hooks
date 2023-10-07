@@ -20,11 +20,11 @@ nav:
 ## API
 
 ```typescript
-const [state, { toggle, set, setLeft, setRight }] = useToggle(defaultValue?: boolean);
+function useToggle<T = boolean>(): [boolean, Actions<T>];
 
-const [state, { toggle, set, setLeft, setRight }] = useToggle<T>(defaultValue: T);
+function useToggle<T>(defaultValue: T): [T, Actions<T>];
 
-const [state, { toggle, set, setLeft, setRight }] = useToggle<T, U>(defaultValue: T, reverseValue: U);
+function useToggle<D, R>(defaultValue: D, reverseValue?: R): [D | R, Actions<D | R>];
 ```
 
 ### Params

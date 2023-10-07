@@ -1,5 +1,4 @@
 import { menus } from './menus';
-// const packages = require('../packages/hooks/package.json');
 
 export default {
   exportStatic: {},
@@ -20,13 +19,16 @@ export default {
       'fusion',
     ],
   ],
-  mode: 'site',
   title: 'techscrum react hooks',
-  favicon: '/avatar.png',
-  logo: '/logo.png',
-  // alias: {
-  //   encodeHooks: process.cwd() + '/packages/hooks/src/index.ts',
-  // },
+  mode: 'site',
+  // favicon: '/avatar.png',
+  logo: '/logo.svg',
+  dynamicImport: {},
+  manifest: {},
+  hash: true,
+  alias: {
+    techHooks: process.cwd() + '/packages/hooks/src/index.ts',
+  },
   resolve: {
     includes: ['docs', 'packages/hooks/src'],
   },
@@ -43,6 +45,13 @@ export default {
   navs: [
     { title: '指南', path: '/guide' },
     { title: 'Hooks', path: '/hooks' },
+  ],
+  links: [
+    {
+      rel: 'stylesheet',
+      href: 'https://unpkg.com/@alifd/theme-design-pro@0.6.2/dist/next-noreset.min.css',
+    },
+    { rel: 'stylesheet', href: '/style.css' },
   ],
   menus: {
     '/': [
