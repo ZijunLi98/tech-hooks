@@ -1,6 +1,6 @@
 # tech-hooks
 
-TechScrum Hooks Repo
+TechScrum Hook Repo
 
 ## ✨ 特性
 
