@@ -32,21 +32,8 @@ jobs:
           FOLDER: dist
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-  publish-npm:
-    needs: build-and-deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
-
-      - name: Lock npm version
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.18.0
-
       - name: publish NPM
-        run: |
-          npm i -g pnpm
-          pnpm run action:pub
+        run: pnpm run action:pub
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
