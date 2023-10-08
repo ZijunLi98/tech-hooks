@@ -6,6 +6,7 @@ export default {
     type: 'none',
     exclude: [],
   },
+  publicPath: '/tech-hooks/',
   // hash 模式路由
   history: { type: 'hash' },
   extraBabelPlugins: [
@@ -22,7 +23,7 @@ export default {
   title: 'techscrum react hooks',
   mode: 'site',
   // favicon: '/avatar.png',
-  logo: '/logo.svg',
+  logo: '/tech-hooks/logo.svg',
   dynamicImport: {},
   manifest: {},
   hash: true,
@@ -32,26 +33,16 @@ export default {
   resolve: {
     includes: ['docs', 'packages/hooks/src'],
   },
-  //   dynamicImport: {},
-  //   manifest: {},
-  //   hash: true,
-  //   links: [
-  //     {
-  //       rel: 'stylesheet',
-  //       href: 'https://unpkg.com/@alifd/theme-design-pro@0.6.2/dist/next-noreset.min.css',
-  //     },
-  //     { rel: 'stylesheet', href: '/style.css' },
-  //   ],
-  navs: [
-    { title: '指南', path: '/guide' },
-    { title: 'Hooks', path: '/hooks' },
-  ],
   links: [
     {
       rel: 'stylesheet',
       href: 'https://unpkg.com/@alifd/theme-design-pro@0.6.2/dist/next-noreset.min.css',
     },
     { rel: 'stylesheet', href: '/style.css' },
+  ],
+  navs: [
+    { title: '指南', path: '/guide' },
+    { title: 'Hooks', path: '/hooks' },
   ],
   menus: {
     '/': [
