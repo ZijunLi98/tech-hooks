@@ -28,5 +28,5 @@ $ yarn add tech-hooks
 ## 🔨 使用
 
 ```ts
-import { useToggle } from 'tech-hooks';
+import { useToggle } from 'techHooks';
 ```

@@ -1,4 +1,4 @@
-name: Build and test
+name: Build and Deploy
 on:
   push:
     branches:
@@ -21,3 +21,7 @@ jobs:
           pnpm run init
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
+
+      - name: test
+        run: |
+          pnpm run test

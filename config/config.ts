@@ -22,7 +22,7 @@ export default {
   ],
   title: 'techscrum react hooks',
   mode: 'site',
-  // favicon: '/avatar.png',
+  favicon: '/tech-hooks/favicon.ico',
   logo: '/tech-hooks/logo.svg',
   dynamicImport: {},
   manifest: {},

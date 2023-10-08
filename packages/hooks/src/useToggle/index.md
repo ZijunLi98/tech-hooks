@@ -31,7 +31,7 @@ function useToggle<D, R>(defaultValue: D, reverseValue?: R): [D | R, Actions<D |
 
 | 参数         | 说明                     | 类型 | 默认值  |
 | ------------ | ------------------------ | ---- | ------- |
-| defaultValue | 可选项，传入默认的状态值 | `T`  | `false` |
+| defaultValue | 可选项，传入默认的状态值 | `D`  | `false` |
 | reverseValue | 可选项，传入取反的状态值 | `U`  | -       |
 
 ### Result
@@ -46,6 +46,6 @@ function useToggle<D, R>(defaultValue: D, reverseValue?: R): [D | R, Actions<D |
 | 参数     | 说明                                                                            | 类型                      |
 | -------- | ------------------------------------------------------------------------------- | ------------------------- |
 | toggle   | 切换 state                                                                      | `() => void`              |
-| set      | 修改 state                                                                      | `(state: T \| U) => void` |
+| set      | 修改 state                                                                      | `(state: D \| U) => void` |
 | setLeft  | 设置为 defaultValue                                                             | `() => void`              |
 | setRight | 如果传入了 reverseValue, 则设置为 reverseValue。 否则设置为 defaultValue 的反值 | `() => void`              |
