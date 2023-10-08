@@ -29,5 +29,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: .umi
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
