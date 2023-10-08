@@ -1,10 +1,10 @@
-name: Test, Deploy & Publish
+name: Build and Test
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
-  test-hooks:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,44 +25,3 @@ jobs:
       - name: test
         run: |
           pnpm run test
-
-  build-and-deploy:
-    needs: test-hooks
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
-
-      - name: Lock npm version
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.18.0
-
-      - name: Build dumi
-        run: pnpm run build:doc
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.3
-        with:
-          BRANCH: gh-pages
-          FOLDER: ./dist
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-  publish-npm:
-    needs: build-and-deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
-
-      - name: Lock npm version
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.18.0
-
-      - name: publish NPM
-        run: pnpm run action:pub
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

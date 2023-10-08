@@ -1,12 +1,10 @@
 import { useState, useMemo } from 'react';
 
-type defaultFn = () => void;
-
 export interface Actions<T> {
-  setLeft: defaultFn;
-  setRight: defaultFn;
+  setLeft: () => void;
+  setRight: () => void;
   set: (value: T) => void;
-  toggle: defaultFn;
+  toggle: () => void;
 }
 
 // 1. 默认的 boolean 类型切换

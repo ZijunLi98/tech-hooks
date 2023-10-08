@@ -6,6 +6,7 @@ export default {
     type: 'none',
     exclude: [],
   },
+  // https://zijunli98.github.io/tech-hooks
   publicPath: '/tech-hooks/',
   // hash 模式路由
   history: { type: 'hash' },
