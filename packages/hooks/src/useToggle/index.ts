@@ -5,8 +5,8 @@ type defaultFn = () => void;
 export interface Actions<T> {
   setLeft: defaultFn;
   setRight: defaultFn;
+  set: (value: T) => void;
   toggle: defaultFn;
-  set: (val: T) => void;
 }
 
 // 1. 默认的 boolean 类型切换

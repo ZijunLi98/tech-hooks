@@ -1,4 +1,5 @@
 # 定义 workspace 为 packages 文件夹，在 packages 下存放多个包
 # hooks 为其中一个包
+prefer-workspace-packages: true
 packages:
   - 'packages/*'
