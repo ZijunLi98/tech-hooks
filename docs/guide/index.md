@@ -45,7 +45,7 @@ pnpm run changelog
 ## 📧 联系
 
 - **TechScrum Official Website**: <https://www.techscrumapp.com/>
-- **tech Hooks** <>
-- **GitHub**: <>
+- **tech Hooks** <https://zijunli98.github.io/tech-hooks>
+- **GitHub**: <https://github.com/ZijunLi98/tech-hooks>
 
 </br>
