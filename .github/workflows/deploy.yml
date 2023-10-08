@@ -45,6 +45,8 @@ jobs:
           node-version: 16.18.0
 
       - name: publish NPM
-        run: pnpm run action:pub
+        run: |
+          npm i -g pnpm
+          pnpm run action:pub
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
