@@ -1,16 +1,19 @@
 import { useCallback } from 'react';
-import useSetState, { SetState } from '../useSetState';
+import type { Dispatch, SetStateAction } from 'react';
+import { useState } from 'react';
 
-function useResetState<S extends Record<string, any>>(
+type ResetState = () => void;
+
+const useResetState = <S>(
   initialState: S | (() => S),
-): [S, SetState<S>, () => void] {
-  const [state, setState] = useSetState(initialState);
+): [S, Dispatch<SetStateAction<S>>, ResetState] => {
+  const [state, setState] = useState(initialState);
 
   const resetState = useCallback(() => {
     setState(initialState);
   }, []);
 
   return [state, setState, resetState];
-}
+};
 
 export default useResetState;

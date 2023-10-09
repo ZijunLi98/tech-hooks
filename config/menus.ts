@@ -23,6 +23,10 @@ export const menus = [
     ],
   },
   {
+    title: 'DOM',
+    children: ["useTitle"],
+  },
+  {
     title: 'Effect',
     children: ['useDebounceFn', 'useThrottleFn', 'useUpdateEffect'],
   },

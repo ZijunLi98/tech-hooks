@@ -1,14 +1,14 @@
 ---
 title: 首页
 hero:
-  image: /logo.svg
-  desc: TechScrum Hooks Repo
+  title: Welcome to TechScrum Hooks
+  desc: 一个集成了 React 开发中常用功能的 Hooks 库
   actions:
     - text: 指南
       link: /guide
     - text: Hooks 列表
       link: /hooks
-footer: Copyright (c) © 2023 by techscrum, All Rights Reserved
+footer: Copyright (c) © 2023 by TechScrum, All Rights Reserved
 ---
 
 ## ✨ 特性

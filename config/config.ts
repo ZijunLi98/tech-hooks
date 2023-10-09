@@ -1,6 +1,6 @@
 import { menus } from './menus';
 
-const unpkg = '/tech-hooks-doc@1.0.4/';
+const unpkg = '/tech-hooks-doc@1.0.5/';
 const gitPage = '/tech-hooks/';
 export const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
 
@@ -35,6 +35,7 @@ export default {
   hash: true,
   alias: {
     techHooks: process.cwd() + '/packages/hooks/src/index.ts',
+    'tech-hooks': process.cwd() + '/packages/hooks/src/index.ts',
   },
   resolve: {
     includes: ['docs', 'packages/hooks/src'],

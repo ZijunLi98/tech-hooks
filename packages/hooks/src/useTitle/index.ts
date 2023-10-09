@@ -1,12 +1,25 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import useUnmount from '../useUnmount';
 
 const DEFAULT_OPTIONS = {
-  restorePrevTitle: false,
+  restoreOnUnmount: false,
 };
 
-function useTitle() {
-  const prevTitleRef = useRef(() => {
-    return document.title;
+interface Options {
+  restoreOnUnmount: boolean;
+}
+
+function useTitle(title: string, options: Options = DEFAULT_OPTIONS) {
+  const prevTitleRef = useRef(document.title);
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+  useUnmount(() => {
+    if (options.restoreOnUnmount) {
+      document.title = prevTitleRef.current;
+    }
   });
 }
 

@@ -19,6 +19,7 @@ import useUpdateEffect from './useUpdateEffect';
 import useCookieState from './useCookieState';
 import useLocalStorageState from './useLocalStorageState';
 import useSessionStorageState from './useSessionStorageState';
+import useTitle from './useTitle';
 
 export {
   useToggle,
@@ -42,4 +43,5 @@ export {
   useCookieState,
   useLocalStorageState,
   useSessionStorageState,
+  useTitle,
 };

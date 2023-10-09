@@ -12,11 +12,7 @@ function useUnmount(fn: () => void): void {
 
   const fnRef = useLatest(fn);
 
-  useEffect(() => {
-    return () => {
-      fnRef.current();
-    };
-  }, []);
+  useEffect(() => fnRef.current, []);
 }
 
 export default useUnmount;

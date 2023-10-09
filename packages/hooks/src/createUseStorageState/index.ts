@@ -11,7 +11,7 @@ export interface Options<T> {
   onError?: (error: unknown) => void;
 }
 
-function createUseStorageState(getStorage: () => Storage | undefined) {
+export function createUseStorageState(getStorage: () => Storage | undefined) {
   return function useStorageState<T>(key: string, options: Options<T> = {}) {
     let storage: Storage | undefined;
 
@@ -84,5 +84,3 @@ function createUseStorageState(getStorage: () => Storage | undefined) {
     return [state, updateState] as const;
   };
 }
-
-export default createUseStorageState;

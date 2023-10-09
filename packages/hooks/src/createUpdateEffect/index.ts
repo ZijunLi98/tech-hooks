@@ -27,5 +27,3 @@ export const createUpdateEffect: (hook: EffectHookType) => EffectHookType = (hoo
     }, deps);
   };
 };
-
-export default createUpdateEffect;

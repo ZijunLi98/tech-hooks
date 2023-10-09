@@ -10,10 +10,11 @@ export interface Actions {
 
 function useBoolean(defaultValue: boolean = false): [boolean, Actions] {
   // defaultValue 不一定是 boolean，通过 !! 转换为 boolean 类型
-  const [state, { toggle, set }] = useToggle(defaultValue);
+  const [state, { toggle, set }] = useToggle(!!defaultValue);
 
   const setTrue = useCallback(() => set(true), []);
   const setFalse = useCallback(() => set(false), []);
+  const setNew = useCallback((val) => set(!!val), []);
 
   //   const actions: Actions = {
   //     setTrue: () => set(true),
@@ -22,7 +23,7 @@ function useBoolean(defaultValue: boolean = false): [boolean, Actions] {
   //     set: (val) => set(!!val),
   //   };
 
-  return [state, { toggle, set, setTrue, setFalse }];
+  return [state, { toggle, set: setNew, setTrue, setFalse }];
 }
 
 export default useBoolean;

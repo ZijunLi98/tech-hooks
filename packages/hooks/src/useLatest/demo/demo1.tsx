@@ -1,6 +1,6 @@
 /**
  * title: 基础用法
- * desc: useLatest 返回的永远是最新值
+ * desc: 使用 useLatest 避免 react hooks 中的闭包陷阱，useLatest 返回的永远是最新值
  */
 
 import React, { useState, useEffect } from 'react';

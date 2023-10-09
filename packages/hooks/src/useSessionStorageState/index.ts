@@ -1,4 +1,4 @@
-import createUseStorageState from '../createUseStorageState';
+import { createUseStorageState } from '../createUseStorageState';
 import isBrowser from '../utils/isBrowser';
 
 const useSessionStorageState = createUseStorageState(() =>
