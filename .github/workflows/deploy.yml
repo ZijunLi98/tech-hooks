@@ -23,7 +23,7 @@ jobs:
         run: |
           npm i -g pnpm
           pnpm run init
-          pnpm run build:doc
+          pnpm run build:doc:gitPage
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
 
@@ -36,5 +36,12 @@ jobs:
 
       - name: publish NPM
         run: pnpm run action:pub
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: publish doc to NPM
+        run: |
+          pnpm run build:doc:unpkg  
+          pnpm run action:doc:pub
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

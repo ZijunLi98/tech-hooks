@@ -52,5 +52,9 @@ gulp.task('copyReadme', async function () {
   await gulp.src('../../README.md').pipe(gulp.dest('../../packages/hooks'));
 });
 
-exports.default = gulp.series('clean', 'es', 'cjs', 'declaration', 'copyReadme');
+// step3：将主包的 README 复制到 hooks 包中
+exports.doc = async function copyDumiPackage() {
+  await gulp.src('./config/package.json').pipe(gulp.dest('./dist'));
+};
 
+exports.default = gulp.series('clean', 'es', 'cjs', 'declaration', 'copyReadme');

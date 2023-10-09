@@ -1,0 +1,11 @@
+{
+  "name": "tech-hooks-doc",
+  "version": "1.0.2",
+  "description": "tech-hooks-doc",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John",
+  "license": "ISC"
+}

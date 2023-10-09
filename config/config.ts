@@ -7,7 +7,7 @@ export default {
     exclude: [],
   },
   // https://zijunli98.github.io/tech-hooks
-  publicPath: '/tech-hooks/',
+  publicPath: process.env.DUMI_ENV === 'unpkg' ? '/tech-hooks-doc@1.0.2/' : '/tech-hooks/',
   // hash 模式路由
   history: { type: 'hash' },
   extraBabelPlugins: [
