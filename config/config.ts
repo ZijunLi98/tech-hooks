@@ -1,8 +1,8 @@
 import { menus } from './menus';
 
-const unpkg = '/tech-hooks-doc@1.0.3/';
+const unpkg = '/tech-hooks-doc@1.0.4/';
 const gitPage = '/tech-hooks/';
-const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
+export const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
 
 export default {
   exportStatic: {},
@@ -11,6 +11,7 @@ export default {
     exclude: [],
   },
   // https://zijunli98.github.io/tech-hooks
+  // https://www.unpkg.com/tech-hooks-doc
   publicPath: targetPath,
   // hash 模式路由
   history: { type: 'hash' },
@@ -43,7 +44,7 @@ export default {
       rel: 'stylesheet',
       href: 'https://unpkg.com/@alifd/theme-design-pro@0.6.2/dist/next-noreset.min.css',
     },
-    { rel: 'stylesheet', href: '/tech-hooks/style.css' },
+    { rel: 'stylesheet', href: `${targetPath}style.css` },
   ],
   navs: [
     { title: '指南', path: '/guide' },

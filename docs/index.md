@@ -1,7 +1,7 @@
 ---
 title: 首页
 hero:
-  image: /tech-hooks/logo.svg
+  image: /logo.svg
   desc: TechScrum Hooks Repo
   actions:
     - text: 指南
