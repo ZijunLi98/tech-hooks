@@ -1,5 +1,9 @@
 import { menus } from './menus';
 
+const unpkg = '/tech-hooks-doc@1.0.3/';
+const gitPage = '/tech-hooks/';
+const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
+
 export default {
   exportStatic: {},
   nodeModulesTransform: {
@@ -7,7 +11,7 @@ export default {
     exclude: [],
   },
   // https://zijunli98.github.io/tech-hooks
-  publicPath: process.env.DUMI_ENV === 'unpkg' ? '/tech-hooks-doc@1.0.2/' : '/tech-hooks/',
+  publicPath: targetPath,
   // hash 模式路由
   history: { type: 'hash' },
   extraBabelPlugins: [
@@ -23,8 +27,8 @@ export default {
   ],
   title: 'techscrum react hooks',
   mode: 'site',
-  favicon: '/tech-hooks/favicon.ico',
-  logo: '/tech-hooks/logo.svg',
+  favicon: `${targetPath}favicon.ico`,
+  logo: `${targetPath}logo.svg`,
   dynamicImport: {},
   manifest: {},
   hash: true,
