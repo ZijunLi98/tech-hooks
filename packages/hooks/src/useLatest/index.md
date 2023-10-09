@@ -5,7 +5,7 @@ nav:
 
 # useLatest
 
-返回当前最新值的 Hook，可以避免闭包问题。
+返回当前最新值的 Hook，可以避免 react hooks 的闭包陷阱。
 
 ## 代码演示
 

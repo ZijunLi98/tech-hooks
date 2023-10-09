@@ -1,6 +1,6 @@
 import { menus } from './menus';
 
-const unpkg = '/tech-hooks-doc@1.0.5/';
+const unpkg = '/tech-hooks-doc@1.0.6/';
 const gitPage = '/tech-hooks/';
 export const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
 

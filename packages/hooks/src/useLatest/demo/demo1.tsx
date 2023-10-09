@@ -3,7 +3,7 @@
  * desc: 使用 useLatest 避免 react hooks 中的闭包陷阱，useLatest 返回的永远是最新值
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLatest } from 'techHooks';
 
 export default () => {
@@ -13,7 +13,10 @@ export default () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(latestCountRef.current + 1);
+      console.log('latestCountRef.current: ', latestCountRef.current); // 由于是对象，闭包引用的是对象的地址
+      console.log('count: ', count); // 由于闭包，count 的值永远是组件初次渲染时的初始值
+
+      setCount((prevState) => prevState + 1);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -21,6 +24,7 @@ export default () => {
   return (
     <>
       <p>count: {count}</p>
+      <strong>打开控制台查看 useEffect 内部打印的结果</strong>
     </>
   );
 };
