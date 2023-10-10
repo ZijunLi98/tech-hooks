@@ -67,15 +67,3 @@ useKeyPress(
 | exactMatch | 精确匹配。如果开启，则只有在按键完全匹配的情况下触发事件。比如按键 [shift + c] 不会触发 [c] | `boolean`                                                   | `false`       |
 | useCapture | 是否阻止事件冒泡                                                                            | `boolean`                                                   | `false`       |
 
-## Remarks
-
-1. 按键别名见 [代码](https://github.com/alibaba/hooks/blob/master/packages/hooks/src/useKeyPress/index.ts#L21)
-
-2. 修饰键
-
-```text
-ctrl
-alt
-shift
-meta
-```

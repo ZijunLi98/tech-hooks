@@ -8,7 +8,7 @@ hero:
       link: /guide
     - text: Hooks 列表
       link: /hooks
-footer: Copyright (c) © 2023 by TechScrum, All Rights Reserved
+footer: Open-source MIT Licensed | Copyright © 2023
 ---
 
 ## ✨ 特性
@@ -20,9 +20,17 @@ footer: Copyright (c) © 2023 by TechScrum, All Rights Reserved
 ## 📦 安装
 
 ```bash
-$ pnpm install --save tech-hooks
+$ npm install --save tech-hooks
+# or
+$ pnpm add tech-hooks
 # or
 $ yarn add tech-hooks
+```
+
+## 📦 CDN 引入
+
+```html
+<script src="https://www.unpkg.com/tech-hooks"></script>
 ```
 
 ## 🔨 使用

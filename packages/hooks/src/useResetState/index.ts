@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import useMemoizedFn from '../useMemoizedFn';
 import type { Dispatch, SetStateAction } from 'react';
 import { useState } from 'react';
 
@@ -9,9 +9,9 @@ const useResetState = <S>(
 ): [S, Dispatch<SetStateAction<S>>, ResetState] => {
   const [state, setState] = useState(initialState);
 
-  const resetState = useCallback(() => {
+  const resetState = useMemoizedFn(() => {
     setState(initialState);
-  }, []);
+  });
 
   return [state, setState, resetState];
 };

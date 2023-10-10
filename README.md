@@ -11,7 +11,9 @@ TechScrum Hooks Repo (测试 workflow)
 ## 📦 安装
 
 ```bash
-$ pnpm install --save tech-hooks
+$ npm install --save tech-hooks
+# or
+$ pnpm add tech-hooks
 # or
 $ yarn add tech-hooks
 ```

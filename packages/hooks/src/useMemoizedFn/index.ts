@@ -2,6 +2,7 @@ import { useMemo, useRef } from 'react';
 import { isFunction } from '../utils';
 import isDev from '../utils/isDev';
 
+// 手动声明该函数中this的指向，将this作为函数的第一个参数，该参数只用于约束this，并不是真正的参数，也不会出现在编译结果中。
 type noop = (this: any, ...args: any[]) => any;
 
 type PickFunction<T extends noop> = (
@@ -18,10 +19,11 @@ function useMemoizedFn<T extends noop>(fn: T) {
 
   const fnRef = useRef<T>(fn);
 
-  // why not write `fnRef.current = fn`?
-  // https://github.com/alibaba/hooks/issues/728
   fnRef.current = useMemo(() => fn, [fn]);
 
+  // 除了初始化，memoizedFn.current 永远不会再改变
+  // 但是 memoizedFn.current 内部所依赖的 fnRef.current 的函数可以改变
+  // 达到返回函数永久不变，但是其内部内容可改变的目的
   const memoizedFn = useRef<PickFunction<T>>();
   if (!memoizedFn.current) {
     memoizedFn.current = function (this, ...args) {
@@ -29,6 +31,7 @@ function useMemoizedFn<T extends noop>(fn: T) {
     };
   }
 
+  // 返回一个引用地址永远不会变化的 fn
   return memoizedFn.current as T;
 }
 

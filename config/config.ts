@@ -1,8 +1,8 @@
 import { menus } from './menus';
 
-const unpkg = '/tech-hooks-doc@1.0.6/';
+const unpkg = '/tech-hooks-doc@1.1.0/';
 const gitPage = '/tech-hooks/';
-export const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
+const targetPath = process.env.DUMI_ENV === 'unpkg' ? unpkg : gitPage;
 
 export default {
   exportStatic: {},
@@ -50,6 +50,7 @@ export default {
   navs: [
     { title: '指南', path: '/guide' },
     { title: 'Hooks', path: '/hooks' },
+    { title: 'GitHub', path: 'https://github.com/ZijunLi98/tech-hooks' },
   ],
   menus: {
     '/': [

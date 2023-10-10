@@ -38,6 +38,11 @@ import useToggle from './useToggle';
 import useUnmount from './useUnmount';
 import useUnmountedRef from './useUnmountedRef';
 import useUpdateEffect from './useUpdateEffect';
+import useUpdate from './useUpdate';
+import useRequest from './useRequest';
+import useCreation from './useCreation';
+import useUpdateLayoutEffect from './useUpdateLayoutEffect';
+import useTimeout from './useTimeout';
 
 export {
   configResponsive,
@@ -62,6 +67,7 @@ export {
   useMap,
   useMemoizedFn,
   useMouse,
+  useTimeout,
   useMount,
   useMutationObserver,
   usePreviousState,
@@ -81,4 +87,8 @@ export {
   useUnmount,
   useUnmountedRef,
   useUpdateEffect,
+  useUpdate,
+  useRequest,
+  useCreation,
+  useUpdateLayoutEffect,
 };
